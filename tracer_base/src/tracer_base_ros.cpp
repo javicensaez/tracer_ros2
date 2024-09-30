@@ -21,9 +21,9 @@ TracerBaseRos::TracerBaseRos(std::string node_name)
   this->declare_parameter("base_frame", rclcpp::PARAMETER_STRING);
   this->declare_parameter("odom_topic_name", rclcpp::PARAMETER_STRING);
 
-  this->declare_parameter("is_tracer_mini", rclcpp::PARAMETER_STRING);
-  this->declare_parameter("simulated_robot", rclcpp::PARAMETER_STRING);
-  this->declare_parameter("control_rate", rclcpp::PARAMETER_STRING);
+  this->declare_parameter("is_tracer_mini", rclcpp::PARAMETER_BOOL);
+  this->declare_parameter("simulated_robot", rclcpp::PARAMETER_BOOL);
+  this->declare_parameter("control_rate", rclcpp::PARAMETER_INTEGER);
 
   LoadParameters();
 }
